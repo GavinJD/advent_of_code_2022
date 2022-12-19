@@ -36,7 +36,8 @@ fn monkey_business(input: &str, rounds: usize) -> Result<u64> {
         for i in 0..monkeys.len() {
             while !monkeys[i].items.is_empty() {
                 let mut item = monkeys[i].items.pop_front().unwrap();
-                let to_toss_monkey = monkeys[i].find_to_toss_monkey(rounds, magic_monkey_number, i, &mut item);
+                let to_toss_monkey =
+                    monkeys[i].find_to_toss_monkey(rounds, magic_monkey_number, i, &mut item);
                 monkeys[to_toss_monkey].items.push_back(item);
                 monkeys[i].inspect_count += 1;
             }
@@ -208,7 +209,7 @@ impl Monkey {
         // }
 
         let score = if !is_big {
-            (self.operation.apply_operation(item.val) / 3 ) % (magic_monkey_number)
+            (self.operation.apply_operation(item.val) / 3) % (magic_monkey_number)
         } else {
             self.operation.apply_operation(item.val) % (magic_monkey_number)
         };

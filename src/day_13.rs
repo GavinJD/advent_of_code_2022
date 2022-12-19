@@ -170,7 +170,7 @@ fn parse_packet(s: &str) -> IResult<&str, Packet> {
 
 #[cfg(test)]
 mod tests {
-    use crate::{indexes_in_right_order, decoder_key};
+    use crate::{decoder_key, indexes_in_right_order};
 
     #[test]
     fn example_part1() {
@@ -200,7 +200,6 @@ mod tests {
 
         assert_eq!(vec![1, 2, 4, 6], indexes_in_right_order(input).unwrap());
     }
-
 
     #[test]
     fn example_part2() {

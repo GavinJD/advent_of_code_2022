@@ -164,7 +164,8 @@ impl std::fmt::Display for Cave {
         //     MinMaxResult::OneElement(i) => (*i, *i),
         //     MinMaxResult::MinMax(i, j) => (*i, *j),
         // };
-        let (left_boundary, right_boundary) = (500 - self.bottom_boundary, 500 + self.bottom_boundary);
+        let (left_boundary, right_boundary) =
+            (500 - self.bottom_boundary, 500 + self.bottom_boundary);
 
         for y in 0..=(self.bottom_boundary + 1) {
             for x in left_boundary..=right_boundary {

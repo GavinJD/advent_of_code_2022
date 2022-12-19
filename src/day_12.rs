@@ -204,7 +204,7 @@ impl Display for Grid {
 mod tests {
     use std::str::FromStr;
 
-    use crate::{find_shortest_path, Grid, find_shortest_start_for_path};
+    use crate::{find_shortest_path, find_shortest_start_for_path, Grid};
 
     #[test]
     fn example_part1() {

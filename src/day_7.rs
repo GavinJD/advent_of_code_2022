@@ -340,7 +340,7 @@ impl FromStr for FileSystem {
 
 #[cfg(test)]
 mod tests {
-    use crate::{total_size_of_at_most, size_of_smallest_dir_to_delete};
+    use crate::{size_of_smallest_dir_to_delete, total_size_of_at_most};
 
     #[test]
     fn example_part1() {
@@ -370,7 +370,6 @@ $ ls
 
         assert_eq!(total_size_of_at_most(100_000, input).unwrap(), 95437);
     }
-
 
     #[test]
     fn example_part2() {
