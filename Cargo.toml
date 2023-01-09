@@ -63,6 +63,9 @@ path = "src/day_18.rs"
 name = "day_19"
 path = "src/day_19.rs"
 
+[profile.release]
+debug = true
+
 [dependencies]
 color-eyre = "0.5"
 itertools = "0.10.5"
