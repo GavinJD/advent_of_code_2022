@@ -78,8 +78,8 @@ fn get_max_possible_pressure_with_elephant(input: &str) -> Result<u64> {
         .filter(|(s1, s2)| s1.len() > (to_open_tunnels.len() / 2 - 1) && s2.len() > (to_open_tunnels.len() / 2 - 1))
         .enumerate()
         .map(|(_i, (s1, s2))| {
-            // if i % 1000 == 0 {
-            //     println!("  At {i}...");
+            // if _i % 1000 == 0 {
+            //     println!("  At {_i}...");
             // }
             tunnels
                 .nodes()
@@ -280,7 +280,7 @@ fn all_combinations_split_in_2<T: Copy + Eq + Hash>(
         let mut set2: HashSet<T> = HashSet::with_capacity(to_split.len());
 
         for (bit, item) in to_split.iter().enumerate() {
-            if (current & (1 << bit)).count_ones() == 1 {
+            if (current & (1 << bit)) > 0 {
                 set1.insert(*item);
             } else {
                 set2.insert(*item);
